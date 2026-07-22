@@ -1,36 +1,164 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mark LaRose Portfolio
 
-## Getting Started
+A modern, responsive portfolio showcasing my experience in software development, construction, electrical trades, and project planning.
 
-First, run the development server:
+Built with performance, accessibility, and clean design in mind, this portfolio highlights both professional experience and personal projects while demonstrating modern full-stack development practices.
+
+---
+
+## Live Website
+
+🌐 https://marklarose.dev
+
+---
+
+## Features
+
+- Responsive design across desktop, tablet, and mobile
+- Interactive animated hero section
+- Blueprint-inspired SVG signal animations
+- Project showcase
+- Experience timeline
+- Skills overview
+- Contact section
+- Dark / Light theme support
+- Search engine optimized (SEO)
+- Open Graph & social sharing metadata
+- Progressive Web App (PWA) favicon support
+
+---
+
+## Built With
+
+- Next.js (App Router)
+- React
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Vercel
+
+---
+
+## Projects Featured
+
+- **2 On Finance**
+  - Full-stack financial dashboard
+  - Market data integration
+  - Economic calendar
+  - Portfolio tracker
+  - Trading journal
+  - Authentication
+  - Subscription system
+
+- **2 On Web Solutions**
+  - Freelance web development agency
+  - Custom websites
+  - Responsive design
+  - Performance optimization
+  - SEO
+
+---
+
+## Local Development
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Mark-LaRose/Portfolio.git
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Production Build
 
-To learn more about Next.js, take a look at the following resources:
+Build the project:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Run the production server:
 
-## Deploy on Vercel
+```bash
+npm run start
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Project Structure
+
+```
+src/
+ ├── app/
+ ├── components/
+ ├── data/
+ ├── hooks/
+ ├── lib/
+ └── styles/
+
+public/
+ ├── images/
+ ├── documents/
+ └── credentials/
+```
+
+---
+
+## Highlights
+
+- Built using the Next.js App Router
+- Responsive layouts for desktop, tablet, and mobile
+- Custom SVG animation system
+- Optimized asset loading
+- Accessible UI
+- Theme-aware favicon support
+- Structured data (JSON-LD)
+- Modern SEO implementation
+
+---
+
+## Deployment
+
+The portfolio is deployed using **Vercel**.
+
+Each push to the main branch automatically triggers a production deployment.
+
+---
+
+## Future Improvements
+
+- Blog / Articles
+- Project filtering
+- Interactive project case studies
+- Performance analytics dashboard
+- Additional accessibility enhancements
+
+---
+
+## Contact
+
+**Mark LaRose**
+
+🌐 https://marklarose.dev
+
+---
+
+© 2026 Mark LaRose. All rights reserved.

@@ -6,12 +6,14 @@ import { ExperienceSection } from "@/components/sections/ExperienceSection";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { ResumeSection } from "@/components/sections/ResumeSection";
 import { WorkSection } from "@/components/sections/WorkSection";
+import { contactDetails } from "@/data/portfolio";
 
 export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Mark LaRose",
+    url: "https://marklarose.dev",
     email: "mailto:larose.m@gmail.com",
     address: {
       "@type": "PostalAddress",
@@ -33,6 +35,7 @@ export default function Home() {
       "Project planning",
       "Responsive web design",
     ],
+    sameAs: [contactDetails.github, contactDetails.linkedin].filter(Boolean),
   };
 
   return (

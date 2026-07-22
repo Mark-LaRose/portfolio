@@ -9,7 +9,7 @@ type SignalPath = SignalTiming & {
   begin: string;
 };
 
-const cycleDuration = "10.8s";
+const cycleDuration = "15s";
 const fadeWindow = 0.03;
 
 function motionKeyTimes({ moveStart, moveEnd }: SignalTiming) {
@@ -65,9 +65,9 @@ export function BlueprintFlowOverlay() {
     {
       id: "hero-blueprint-signal-path-left-middle",
       d:
-        "M 303 455 " +
-        "L 372 455 " +
-        "C 384 455 393 459 395 465",
+        "M 303 465 " +
+        "L 372 465 " +
+        "C 384 465 393 465 395 465",
       begin: "0s",
       moveStart: 0.19,
       moveEnd: 0.34,
@@ -75,9 +75,9 @@ export function BlueprintFlowOverlay() {
     {
       id: "hero-blueprint-signal-path-left-bottom",
       d:
-        "M 303 565 " +
-        "L 370 565 " +
-        "C 388 565 394 538 395 465",
+        "M 303 600 " +
+        "L 372 600 " +
+        "C 390 595 394 538 395 465",
       begin: "0s",
       moveStart: 0.38,
       moveEnd: 0.53,
@@ -85,9 +85,9 @@ export function BlueprintFlowOverlay() {
     {
       id: "hero-blueprint-signal-path-right-top",
       d:
-        "M 1248 333 " +
-        "C 1188 333 1152 365 1120 416 " +
-        "C 1085 448 1032 453 967 453",
+        "M 1110 330 " +
+        "C 1040 330 1040 342 998 415"  +
+        "L 962 470",
       begin: "1.4s",
       moveStart: 0,
       moveEnd: 0.15,
@@ -95,19 +95,19 @@ export function BlueprintFlowOverlay() {
     {
       id: "hero-blueprint-signal-path-right-middle",
       d:
-        "M 1248 455 " +
-        "L 1062 455 " +
-        "C 1028 455 994 454 967 453",
+        "M 1120 475 " +
+        "L 1062 475 " +
+        "C 1028 475 994 464 967 463",
       begin: "1.4s",
       moveStart: 0.19,
       moveEnd: 0.34,
     },
     {
       id: "hero-blueprint-signal-path-right-bottom",
-      d:
-        "M 1248 565 " +
-        "C 1188 565 1150 538 1118 494 " +
-        "C 1082 462 1030 454 967 453",
+        d:
+          "M 1138 610 " +
+          "C 1039 610 1035 590 1018 550 " +
+          "L 960 453",
       begin: "1.4s",
       moveStart: 0.38,
       moveEnd: 0.53,
