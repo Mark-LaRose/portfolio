@@ -16,8 +16,8 @@
   --radius: 8px;
   --header-height: 76px;
   /* Hero overlay animation controls. Keep these subtle: the PNG artwork remains the primary visual. */
-  --hero-signal-duration: 15s;
-  --hero-signal-delay: 1.1s;
+  --hero-signal-duration: 10.8s;
+  --hero-signal-delay: 0s;
   --hero-signal-size: 2.5px;
   --hero-signal-trail-length: 24px;
   --hero-signal-glow: 0 0 10px rgba(79, 195, 180, 0.42);
@@ -444,13 +444,16 @@ li {
 
 .menu-button {
   display: none;
-  gap: 5px;
+  align-content: center;
+  justify-items: center;
+  gap: 4px;
 }
 
 .menu-button span {
   display: block;
   width: 18px;
   height: 2px;
+  border-radius: 999px;
   background: var(--text);
 }
 
@@ -621,6 +624,24 @@ li {
   transform-origin: center;
 }
 
+:root:not([data-theme="dark"]) .hero-graph-paper {
+  border-color: rgba(24, 26, 27, 0.18);
+  background-image:
+    linear-gradient(rgba(24, 26, 27, 0.16) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(24, 26, 27, 0.16) 1px, transparent 1px);
+  opacity: 0.7;
+}
+
+:root:not([data-theme="dark"]) .hero-blueprint {
+  opacity: 0.9;
+  filter: drop-shadow(0 14px 24px rgba(41, 35, 26, 0.11)) saturate(0.96);
+}
+
+:root:not([data-theme="dark"]) .hero-overview {
+  opacity: 0.93;
+  box-shadow: 0 22px 46px rgba(41, 35, 26, 0.18);
+}
+
 .project-meta {
   display: flex;
   align-items: center;
@@ -690,7 +711,6 @@ li {
 
 .hero-blueprint-signal-particle {
   opacity: 0;
-  animation: hero-signal-visibility var(--hero-signal-duration) var(--hero-signal-delay) linear infinite;
 }
 
 .hero-blueprint-signal-core {
@@ -1016,6 +1036,12 @@ li {
     linear-gradient(135deg, var(--accent-soft), transparent 42%),
     var(--bg-muted);
   padding: 28px;
+}
+
+.project-media:has(.project-preview-finance),
+.project-media:has(.project-preview-web) {
+  overflow: visible;
+  padding: 12px 16px 12px 8px;
 }
 
 .case-number {
@@ -1754,6 +1780,10 @@ li {
     opacity: 0.12;
   }
 
+  .hero-blueprint-signal-particle {
+    display: none;
+  }
+
   .hero-blueprint-signal-rail {
     opacity: 0.04;
   }
@@ -1810,12 +1840,15 @@ li {
     position: relative;
     min-height: 54px;
     width: calc(100vw - 16px);
+    align-items: center;
+    padding: 8px 8px 8px 12px;
   }
 
   .header-actions {
-    position: fixed;
-    right: 16px;
-    top: 17px;
+    position: static;
+    height: 44px;
+    align-items: center;
+    margin-left: auto;
   }
 
   .desktop-nav,
@@ -1825,6 +1858,7 @@ li {
 
   .menu-button {
     display: inline-grid;
+    grid-template-rows: repeat(3, 2px);
   }
 
   .wordmark-text {
@@ -2155,4 +2189,146 @@ li {
   opacity: 0.7;
   font-size: 1.2rem;
   line-height: 1;
+}
+
+.project-screenshot-pair {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 540px;
+}
+
+.project-preview-finance,
+.project-preview-web {
+  width: min(100%, 560px);
+  height: min(100%, 540px);
+  aspect-ratio: auto;
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.project-shot {
+  position: absolute;
+  overflow: visible;
+  width: 108%;
+  aspect-ratio: 1902 / 916;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.3);
+}
+
+.project-shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.project-shot-primary {
+  top: 0;
+  left: -18px;
+  z-index: 1;
+  transform: rotate(-1.2deg);
+}
+
+.project-shot-secondary {
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  transform: rotate(1.2deg);
+}
+
+.project-preview-web .project-shot-primary {
+  top: 0;
+}
+
+.project-preview-web .project-shot-secondary {
+  bottom: 0;
+}
+
+.project-shot {
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.project-shot-primary:hover {
+  transform: rotate(-1.2deg) translateY(-4px);
+}
+
+.project-shot-secondary:hover {
+  transform: rotate(1.2deg) translateY(-4px);
+}
+
+@media (min-width: 1180px) {
+  .project-preview-finance .project-screenshot-pair,
+  .project-preview-web .project-screenshot-pair {
+    transform: translateX(-24px);
+  }
+}
+
+@media (max-width: 900px) {
+  .project-media:has(.project-preview-finance),
+  .project-media:has(.project-preview-web) {
+    padding: 14px 12px;
+  }
+
+  .project-preview-finance,
+  .project-preview-web {
+    width: min(100%, 520px);
+    height: 500px;
+  }
+
+  .project-screenshot-pair {
+    min-height: 500px;
+  }
+
+  .project-shot-primary {
+    top: 0;
+    left: 0;
+    width: 92%;
+  }
+
+  .project-shot-secondary {
+    right: 0;
+    bottom: 0;
+    width: 92%;
+  }
+}
+
+@media (max-width: 600px) {
+  .project-media:has(.project-preview-finance),
+  .project-media:has(.project-preview-web) {
+    padding: 10px 6px;
+  }
+
+  .project-preview-finance,
+  .project-preview-web {
+    width: 100%;
+    height: 360px;
+  }
+
+  .project-screenshot-pair {
+    min-height: 360px;
+  }
+
+  .project-shot-primary {
+    top: 0;
+    left: 0;
+    width: 96%;
+  }
+
+  .project-shot-secondary {
+    right: 0;
+    bottom: 0;
+    width: 96%;
+  }
+
+  .project-shot {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.24);
+  }
 }

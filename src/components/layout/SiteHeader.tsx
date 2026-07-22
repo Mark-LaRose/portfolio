@@ -84,6 +84,7 @@ export function SiteHeader() {
           >
             <span />
             <span />
+            <span />
           </button>
         </div>
       </div>

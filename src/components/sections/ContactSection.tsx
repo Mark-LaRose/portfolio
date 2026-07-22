@@ -21,7 +21,7 @@ export function ContactSection() {
           <h2>Have a project, opportunity, or difficult problem to solve?</h2>
 
           <p>
-            Whether you're hiring, looking for a freelance developer, or have a challenging problem to solve, I'd be happy to hear from you. I'm always interested in software development opportunities, planning and coordination roles, construction-related work, and practical software collaborations.
+            Whether you&apos;re hiring, looking for a freelance developer, or have a challenging problem to solve, I&apos;d be happy to hear from you. I&apos;m always interested in software development opportunities, planning and coordination roles, construction-related work, and practical software collaborations.
           </p>
         </div>
 
